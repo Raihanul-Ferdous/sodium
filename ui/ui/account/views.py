@@ -8,7 +8,7 @@ from user.models import sign
 
 def home(request):
     user_list = sign.objects.all()
-    user_dict = {'user':user_list}
+    user_dict = {'users':user_list}
     return render(request,'account/prof.html',context=user_dict)
     #return render(request, 'account/prof.html')
 
