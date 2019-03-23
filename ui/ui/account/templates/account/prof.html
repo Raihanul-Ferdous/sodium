@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <br><br><br><br>
+  {% load crispy_forms_tags %}
+  <div class="container">
+    <h1>Welcome</h1>
+    {% if user %}
+    <ol>
+      {% for items in users %}
+      <li> User info</li>
+      <ul>
+        <li>Phone No: {{items.Phone}}</li>
+        <li>Age: {{items.Age}}</li>
+        <li>Gender: {{items.Gender}}</li>
+      </ul>
+      {% endfor %}
+    </ol>
+    {% endif %}
+
+
+  </div>
+{% endblock content %}
